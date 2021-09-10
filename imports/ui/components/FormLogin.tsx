@@ -35,7 +35,7 @@ const FormLogin = (props): JSX.Element => {
         <input
           type="text"
           className="input"
-          name="phone"
+          name="phoneNumber"
           placeholder="Phone Number"
           value={phoneNumber}
           onChange={handleChange}

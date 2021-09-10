@@ -10,8 +10,8 @@ const App = (): JSX.Element => {
     <ThemeProvider theme={theme}>
       <Router>
         <Switch>
-          <Route path="/" component={Login} />
           <Route path="/chats" component={Main} />
+          <Route path="/" component={Login} />
         </Switch>
       </Router>
     </ThemeProvider>
