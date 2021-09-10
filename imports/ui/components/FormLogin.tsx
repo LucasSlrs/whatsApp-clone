@@ -1,12 +1,8 @@
 import React from "react";
 import StyledFormLogin from "../elements/StyledFormLogin";
+import { UserCredential } from "../interface";
 
-interface UserCredential {
-  username: string;
-  phoneNumber: string;
-  password: string;
-}
-const FormLogin = (props: any): JSX.Element => {
+const FormLogin = (props): JSX.Element => {
   const [state, setState] = React.useState<UserCredential>({
     username: "",
     phoneNumber: "",
@@ -55,7 +51,9 @@ const FormLogin = (props: any): JSX.Element => {
           onChange={handleChange}
         />
       </label>
-      <button className="loginBtn">Login</button>
+      <button onClick={() => props.onLogin(state)} className="loginBtn">
+        Login
+      </button>
     </StyledFormLogin>
   );
 };

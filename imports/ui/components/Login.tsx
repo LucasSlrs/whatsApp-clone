@@ -5,9 +5,10 @@ import RightImg from "./RightImg";
 const messageText: string = "Login to start chatting";
 
 const Login = () => {
+  const handleLogin = (state) => {};
   return (
     <RightImg messageText={messageText}>
-      <FormLogin />
+      <FormLogin onLogin={handleLogin} />
     </RightImg>
   );
 };
